@@ -11,30 +11,30 @@ from pinecone import Pinecone
 from openai import OpenAI
 import time
 import numpy as np
-from dotenv import load_dotenv
-
-# # Initialize Pinecone
-# pc = Pinecone(api_key=st.secrets["PINECONE_API_KEY"])
-# pinecone_index = pc.Index("codebase-rag")
-
-# # Initialize OpenAI client
-# client = OpenAI(
-#     base_url="https://api.groq.com/openai/v1",
-#     api_key=st.secrets["GROQ_API_KEY"]
-# )
-
-# Load environment variables from .env file
-load_dotenv()
+# from dotenv import load_dotenv
 
 # Initialize Pinecone
-pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+pc = Pinecone(api_key=st.secrets["PINECONE_API_KEY"])
 pinecone_index = pc.Index("codebase-rag")
 
 # Initialize OpenAI client
 client = OpenAI(
     base_url="https://api.groq.com/openai/v1",
-    api_key=os.getenv("GROQ_API_KEY")
+    api_key=st.secrets["GROQ_API_KEY"]
 )
+
+# Load environment variables from .env file
+# load_dotenv()
+
+# # Initialize Pinecone
+# pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+# pinecone_index = pc.Index("codebase-rag")
+
+# # Initialize OpenAI client
+# client = OpenAI(
+#     base_url="https://api.groq.com/openai/v1",
+#     api_key=os.getenv("GROQ_API_KEY")
+# )
 
 
 def get_huggingface_embeddings(text, model_name="sentence-transformers/all-mpnet-base-v2"):
