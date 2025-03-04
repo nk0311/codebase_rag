@@ -29,7 +29,6 @@ MarkupSafe==3.0.2
 mpmath==1.3.0
 multidict==6.1.0
 networkx==3.4.2
-numpy
 openai==1.57.0
 packaging==24.2
 Pillow==10.0.1

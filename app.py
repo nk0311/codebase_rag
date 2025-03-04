@@ -10,7 +10,7 @@ from pinecone import Pinecone
 # from langchain.text_splitter import RecursiveCharacterTextSplitter
 from openai import OpenAI
 import time
-import numpy as np
+# import numpy as np
 # from dotenv import load_dotenv
 
 # Initialize Pinecone
